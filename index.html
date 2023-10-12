@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">First H1</h1>
+    <h1 id="b">Second H1</h1>
+    <h3 id="c">First H3</h3>
+    <h3 id="d">Second H3</h3>
+    <h5 id="e">First H5</h5>
+    <h5 id="f">Second H5</h5>
+    <h5 id="g">Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button id="b1" onClick="changeH1()">Change H1</button>
+    <button id="b2" onClick="changeH3()">Change H3</button>
+    <button id="b3" onClick="changeH5()">Change H5</button>
+    <button id="b4" onClick="changeGreen()">Change Green</button>
+    <button id="b5" onClick="changeRed()">Change Red</button>
+    <button id="b6" onClick="changeBlue()">Change Blue</button>
+    <script>
+        document.querySelector("#b1").addEventListener("click", changeH1)
+      function changeH1() {
+        // the colour of first <h1> should turn to red
+    //         document.getElementById("a").style.color="red"
+    //         document.getElementById("b").style.color="red"
+            var h1 =document.querySelectorAll("h1")
+            for(var i=0; i<h1.length; i++){
+                h1[i].style.color ="red"
+            }
+         }
+
+      document.querySelector("#b2").addEventListener("click",changeH3 )
+      function changeH3() {
+        // the colour of all <h3> should turn to green
+            // document.getElementById("c").style.color="green"
+            var h3 = document.querySelectorAll("h3")
+            for(var i=0; i<h3.length; i++){
+                h3[i].style.color = "green"
+            }
+        
+      }
+      document.querySelector("#b3").addEventListener("click",changeH5)
+      function changeH5() {
+        // the colour of all <h5> should turn to blue
+            // document.getElementById("e").style.color="blue"
+            // document.getElementById("f").style.color="blue"
+            // document.getElementById("g").style.color="blue"
+            var h5 = document.querySelectorAll("h5")
+            for(var i=0; i<h5.length; i++){
+                h5[i].style.color = "blue"
+            }
+      }
+      document.getElementsByClassName("green").addEventListener("click", changeGreen)
+      function changeGreen() {
+        // all the elements with the class green should change to green
+        var green = document.querySelectorAll("green")
+        for (var i=0; i<changeGreen.length; i++){
+            green[i].style.color ="green"
+        }
+      }
+
+      function changeRed() {
+        // all the elements with the class red should change to red
+        document.getElementById("").style.color="red"
+      }
+
+      function changeBlue() {
+        // all the elements with the class blue should change to blue
+        document.getElementById("").style.color="blue"
+      }
+    </script>
+</body>
+</html>
